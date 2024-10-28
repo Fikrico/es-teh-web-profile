@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lihat Selengkapnya</title>
+  <link rel="stylesheet" href="css/ls.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <h1 class="logo">Daftar Menu dan Galeri</h1>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#profile">Profil</a></li>
+      </ul>
+    </nav>
+    <i id="menu-btn" class="fas fa-bars"></i>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    
+    <!-- Section Profil Usaha -->
+    <section class="about profile scroll-animation" id="profile">
+        
+        <div class="profile-container">
+          <div class="content">
+            <h3 class="title">Istana Es Teh Raja</h3>
+           <p>Selamat datang di Istana Es Teh Raja, tempat kamu bisa nemuin es teh paling refreshing yang nggak cuma sekadar minuman biasa! Setiap gelas yang kami sajikan nggak hanya menyegarkan tenggorokan, tapi juga bikin hati kamu adem. Dari teh klasik yang selalu juara sampai kreasi rasa unik yang bikin penasaran, kami hadir buat ngegoyang lidah kamu dengan kenikmatan teh yang nggak biasa.
+            <p>Punya hari yang berat? Es teh kami siap jadi penyelamat mood! Mulai dari es teh manis seger, varian rasa yang bikin ceria, sampai berbagai menu minuman dan makanan yang bikin seru, kami punya segalanya buat bikin harimu makin lengkap. Nggak cuma enak, tapi juga asik banget buat ngegame! Cocok banget buat kamu yang pengen mabar dengan teman kamu!</p>
+            Di Istana Es Teh Raja, setiap tegukan adalah petualangan rasa! Kami nggak sekadar nyajiin minuman, tapi pengalaman. Jadi, tunggu apa lagi? Yuk, mampir dan cobain langsung sensasi es teh yang bikin nagih. Rasakan bedanya, dan siap-siap jadi langganan tetap!</p> 
+          </div>
+          <div class="profile-logo">
+            <img src="image/ES TEH JUKI.png" alt="Profil Usaha Es Teh Kota">
+          </div>
+        </div>
+    </section>
+
+    <!-- Section Menu -->
+    <section class="menu scroll-animation" id="menu">
+      <h2 class="heading">Daftar Menu</h2>
+      <div class="box-container">
+        <div class="box">
+          <img src="image/MENU1.png" alt="Menu 1">
+          </div>
+          <div class="box">
+            <img src="image/menu2.png" alt="Menu 2">
+            </div>
+            <div class="box">
+                <img src="image/menu3.png" alt="Menu 3">
+                </div>
+                <div class="box">
+                    <img src="image/menu4.png" alt="Menu 4">
+                    </div>
+                    <div class="box">
+                        <img src="image/menu5.png" alt="Menu 5">
+                        </div>
+                        <div class="box">
+                            <img src="image/menu6.png" alt="Menu 6">
+                            </div>
+                            <div class="box">
+                                <img src="image/menu7.png" alt="Menu 7">
+                                </div>
+                                <div class="box">
+                                    <img src="image/menu8.png" alt="Menu 8">
+                                    </div>
+                                    <div class="box">
+                                        <img src="image/menu9.png" alt="Menu 9">
+                                        </div>
+                                        <div class="box">
+                                            <img src="image/menu10.png" alt="Menu 10">
+                                            </div>
+                                            <div class="box">
+                                                <img src="image/menu11.png" alt="Menu 11">
+                                                </div>
+        </div>
+        <!-- Tambahkan lebih banyak menu sesuai kebutuhan -->
+      </div>
+    </section>
+
+    <!-- Section Galeri -->
+    <section class="galeri scroll-animation" id="galeri">
+        <h2 class="heading">Galeri Kami</h2>
+        <div class="image-grid">
+          <img src="image/galeri(13).jpeg" alt="Gambar 1">
+          <img src="image/galeri(14).jpeg" alt="Gambar 2">
+          <img src="image/galeri(15).jpeg" alt="Gambar 3">
+          <img src="image/galeri(16).jpeg" alt="Gambar 4">
+          <img src="image/galeri(17).jpeg" alt="Gambar 5">
+          <img src="image/galeri(18).jpeg" alt="Gambar 6">
+          <img src="image/galeri(25).jpeg" alt="Gambar 7">
+          <img src="image/bgutama.jpg" alt="Gambar 8">
+        </div>
+      </section>
+      
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>Kontak Kami</h3>
+        <a href="#"><i class="fas fa-phone"></i>123-456-789</a>
+        <a href="#"><i class="fas fa-envelope"></i>contact@estehkota.com</a>
+      </div>
+      <!-- Tambahkan lebih banyak informasi di footer -->
+    </div>
+    <p class="credit">© 2024 by <span>Es Teh Kota</span> | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // Animasi Scroll
+    const scrollElements = document.querySelectorAll(".scroll-animation");
+
+    const elementInView = (el, dividend = 1) => {
+      const elementTop = el.getBoundingClientRect().top;
+      return (
+        elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+      );
+    };
+
+    const displayScrollElement = (element) => {
+      element.classList.add("show");
+    };
+
+    const hideScrollElement = (element) => {
+      element.classList.remove("show");
+    };
+
+    const handleScrollAnimation = () => {
+      scrollElements.forEach((el) => {
+        if (elementInView(el, 1.25)) {
+          displayScrollElement(el);
+        } else {
+          hideScrollElement(el);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", () => {
+      handleScrollAnimation();
+    });
+  </script>
+
+</body>
+</html>

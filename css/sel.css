@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --main-color: #443;
+    --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+    --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
+    --border: .2rem solid var(--main-color);
+    --border-hover: .2rem dashed var(--main-color);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    font-size: 9rem;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: .05rem var(--main-color);
+    letter-spacing: .2rem;
+    text-align: center;
+    pointer-events: none;
+    position: relative;
+}
+
+.heading span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: var(--main-color);
+    font-size: 3rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: .9rem 1.5rem;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    border-color: #efff09;
+    color: #efff09;
+    background: #539b05;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+
+.btn:hover {
+    border-radius: var(--border-radius-hover);
+    border: var(--border-hover);
+}
+
+/* HEADER */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background: #539b05;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 2rem 9%;
+}
+
+.header .logo {
+    color: #efff09;
+    font-size: 2.3rem;
+}
+
+.header .logo i {
+    padding-left: .5rem;
+}
+
+.header .navbar.active{
+    background-color: #539b05;
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    color: #efff09;
+}
+
+.header .btn {
+    margin-top: 0;
+}
+
+#menu-btn {
+    font-size: 3rem;
+    color: #efff09;
+    cursor: pointer;
+    display: none;
+    
+}
+
+/* PROFIL */
+
+.profil {
+    min-height: 100vh;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    
+    background-position: center;
+    background-size: cover;
+}
+
+.profil .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.profil .row .image {
+    flex: 1 1 42rem;
+}
+
+.profil .row .image img {
+    width: 100%;
+    animation: profilImage 4s linear infinite;
+}
+
+@keyframes profilImage {
+
+    0%,
+    100% {
+        transform: scale(.9);
+        border-radius: var(--border-radius-hover);
+    }
+
+    50% {
+        transform: scale(.8);
+        border-radius: var(--border-radius);
+    }
+}
+
+.profil .heading{
+    color: #fff;
+    -webkit-text-stroke-color: #539b05;
+}
+
+.profil .row .content {
+    flex: 1 1 42rem;
+}
+
+.profil .row .content .title {
+    color: #539b05;
+    font-size: 3rem;
+    line-height: 1.8;
+}
+
+.profil .row .content p {
+    color: #539b05;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.profil .row .content .icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 3rem;
+}
+
+.profil .row .content .icons-container .icons {
+    flex: 1 1 15rem;
+    padding: 1.5rem;
+    text-align: center;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    background-color: #fff;
+    border-color: #539b05;
+    border-color: #539b05;
+}
+
+.profil .row .content .icons-container .icons img {
+    height: 5rem;
+}
+
+.profil .row .content .icons-container .icons h3 {
+    font-size: 1.7rem;
+    padding-top: 1rem;
+    color: #539b05;
+}
+
+/* menu*/
+
+.menu-section {
+    padding: 60px 20px;
+}
+
+.menu-section .section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #539b05;
+}
+
+
+
+.menu-logos-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-logo-item {
+    position: relative;
+    text-align: center;
+    flex: 1 1 calc(22.222% - 40px);
+    min-width: 250px;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: transparent;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+
+.menu-logo-item:hover {
+    transform: translateY(-10px);
+    background: #ffffff;
+}
+
+.menu-logo-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* galeri*/
+
+.galeri-section {
+    padding: 60px 20px;
+}
+
+.galeri-section .section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #539b05;
+}
+
+
+
+.galeri-logos-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.galeri-logo-item {
+    position: relative;
+    text-align: center;
+    flex: 1 1 calc(44.444% - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: transparent;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+
+.galeri-logo-item:hover {
+    transform: translateY(-10px);
+    background: #ffffff;
+}
+
+.galeri-logo-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer {
+    min-height: 100vh;
+    padding-top: 12rem;
+    background: url(../image/backgrounghome.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.footer .heading{
+    color: white;
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    color: white;
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    color: #efff09;
+}
+
+.footer .box-container .box a i {
+    padding-right: .5rem;
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 2rem;
+}
+
+.footer .credit {
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    color: black;
+}
+
+.footer .credit span {
+    border-bottom: var(--border-hover);
+}
+
+/* CSS for the scroll animation */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-in-out;
+}
+
+.scroll-animation.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+

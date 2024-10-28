@@ -1,0 +1,222 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  header {
+    background-color: #539b05;
+    color: #efff09;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #efff09;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 20px;
+  }
+
+  
+  
+/* Styling for the profile container */
+.profile-container {
+    display: flex;
+    flex-wrap: wrap; /* Agar responsif di layar kecil */
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: #539b05;
+}
+
+/* Styling untuk teks profil */
+.profile .content {
+    width: 65%; /* Mengatur lebar teks */
+    text-align: justify;
+    color: #539b05;
+}
+
+/* Styling untuk logo es teh */
+.profile-logo {
+    width: 30%; /* Lebar logo */
+    text-align: right;
+}
+
+.profile-logo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Menyesuaikan layout untuk layar lebih kecil */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column; /* Gambar dan teks berurutan secara vertikal di layar kecil */
+    }
+    .profile .content,
+    .profile-logo {
+        width: 100%; /* Gambar dan teks memenuhi lebar layar */
+        text-align: center;
+    }
+    .profile-logo img {
+        margin-top: 20px; /* Memberi jarak antara teks dan gambar di layar kecil */
+    }
+}
+
+  
+  
+  /* Menu Styles */
+#menu h2 {
+    color: #539b05;
+}
+
+/* Container untuk menu */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Jarak di antara gambar */
+    gap: 1rem; /* Mengatur jarak antar gambar */
+    padding: 2rem;
+    max-width: 1200px; /* Batas maksimal lebar container untuk memastikan layout */
+    margin: 0 auto; /* Pusatkan container */
+}
+
+/* Gaya untuk gambar menu */
+.menu img {
+    width: 100%; /* Pastikan gambar memenuhi seluruh lebar container fleksibel */
+    height: auto;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+    object-fit: cover; /* Memastikan gambar ter-crop dengan baik di kotaknya */
+}
+
+/* Hover effect untuk memperbesar gambar sedikit */
+.menu img:hover {
+    transform: scale(1.05);
+}
+
+/* Menyusun gambar dalam beberapa kolom berdasarkan ukuran layar */
+@media (min-width: 1024px) {
+    .menu img {
+        flex: 1 1 calc(33.333% - 1rem); /* Membagi gambar menjadi 3 kolom di layar besar */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .menu img {
+        flex: 1 1 calc(33.333% - 2rem); /* Membagi gambar menjadi 3 kolom di layar menengah */
+    }
+}
+
+@media (max-width: 767px) {
+    .menu img {
+        flex: 1 1 calc(50% - 2rem); /* Membagi gambar menjadi 2 kolom di layar kecil */
+    }
+}
+
+@media (max-width: 450px) {
+    .menu img {
+        flex: 1 1 calc(100% - 2rem); /* Gambar memenuhi lebar layar di perangkat kecil */
+    }
+}
+
+
+
+  
+  
+  /* Gallery Section */
+.galeri {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.galeri img {
+    max-width: 100%;
+    height: auto;
+    align-items: center;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+
+
+
+
+/* Media queries untuk membuat gambar responsif */
+@media (min-width: 768px) {
+    .galeri img {
+        flex: 1 1 calc(33.333% - 4rem);
+    }
+}
+
+@media (max-width: 767px) {
+    .galeri img {
+        flex: 1 1 calc(50% - 4rem);
+    }
+}
+
+@media (max-width: 450px) {
+    .galeri img {
+        flex: 1 1 calc(100% - 4rem);
+    }
+}
+
+  
+  /* Footer */
+  footer {
+    background-color: #539b05;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position:static;
+    width: 100%;
+    bottom: 0;
+  }
+
+  .footer .credit {
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    color: black;
+}
+
+.footer .credit span {
+    border-bottom: var(--border-hover);
+}
+/* CSS for the scroll animation */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-in-out;
+}
+
+.scroll-animation.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+  
